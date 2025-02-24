@@ -2,6 +2,7 @@ FROM node:13 as node
 WORKDIR /app/apps/app
 COPY ./apps/app/package.json ./package.json
 RUN npm install
+RUN npm install @babel/core@^7.16.0
 COPY . ../../
 WORKDIR /app
 RUN npm i
